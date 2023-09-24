@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  background: #06141b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 375px;
+  height: 300px;
+  background: rgba(155, 168, 171, 0.1843137255);
+  border: 2px solid rgba(74, 92, 106, 0.5490196078);
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px 3px rgba(74, 92, 106, 0.5490196078);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .titulo {
+  width: 100%;
+  color: #ccd0cf;
+  text-align: center;
+}
+.container .inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .inputs label {
+  color: #ccd0cf;
+  margin-top: 0.6em;
+}
+.container .inputs .dados-produto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .inputs .dados-produto input {
+  padding: 0.2em 0.5em;
+  font-size: 16px;
+  background: #11212d;
+  color: #ccd0cf;
+  border: 1px solid #ccd0cf;
+  border-radius: 0 12px 12px 0;
+}
+.container .inputs .dados-produto ::-moz-placeholder {
+  color: #ccd0cf;
+}
+.container .inputs .dados-produto ::placeholder {
+  color: #ccd0cf;
+}
+.container .inputs .dados-produto span {
+  color: #ccd0cf;
+  padding: 0.2em 0.5em;
+  background: #11212d;
+  border: 1px solid #ccd0cf;
+  border-radius: 12px 0 0 12px;
+}
+.container .inputs .taxa-produto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .inputs .taxa-produto input {
+  padding: 0.2em 0.5em;
+  font-size: 16px;
+  text-align: end;
+  background: #11212d;
+  color: #ccd0cf;
+  border: 1px solid #ccd0cf;
+  border-radius: 12px 0 0 12px;
+}
+.container .inputs .taxa-produto ::-moz-placeholder {
+  color: #ccd0cf;
+}
+.container .inputs .taxa-produto ::placeholder {
+  color: #ccd0cf;
+}
+.container .inputs .taxa-produto span {
+  color: #ccd0cf;
+  padding: 0.2em 0.75em;
+  background: #11212d;
+  border: 1px solid #ccd0cf;
+  border-radius: 0 12px 12px 0;
+}
+.container .botao {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .botao button {
+  padding: 0.2em 0.5em;
+  font-size: 16px;
+  background: #11212d;
+  color: #ccd0cf;
+  border: 1px solid #ccd0cf;
+  border-radius: 15px;
+}
+.container .botao :hover {
+  background: #9ba8ab;
+  color: #06141b;
+}
+.container .resultado {
+  width: 100%;
+  padding: 0.2em 0.5em;
+  font-size: 16px;
+  background: #ccd0cf;
+  border: 1px solid #9ba8ab;
+}
+.container .resultado p {
+  color: #06141b;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de juros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="container">
+        <div class="titulo">
+            <h2>Calculadora de juros</h2>
+        </div>
+
+        <div class="inputs">
+            <label for="valor_produto">Valor do produto</label>
+            <div class="dados-produto">
+                <span>R$</span>
+                <input type="text" name="valor_produto" placeholder="0">
+            </div>
+
+            <label for="taxa">Valor da taxa</label>
+            <div class="taxa-produto">
+                <input type="text" name="taxa" placeholder="0">
+                <span>%</span>
+            </div>
+        </div>
+
+        <div class="botao">
+            <button type="submit">Calcular</button>
+        </div>
+
+        <div class="resultado">
+            
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
