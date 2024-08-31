@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de juros</title>
+    <link rel="stylesheet" href="globals.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,13 +17,15 @@
             <label for="valor_produto">Valor do produto</label>
             <div class="dados-produto">
                 <span>R$</span>
-                <input type="text" name="valor_produto" placeholder="0">
+                <input type="text" id="valor_produto" name="valor_produto" placeholder="0">
             </div>
 
-            <label for="taxa">Valor da taxa</label>
+            <label for="taxa">Porcentagem da taxa</label>
             <div class="taxa-produto">
-                <input type="text" name="taxa" placeholder="0">
-                <span>%</span>
+                <p class="taxa">
+                    <span id="valor_taxa">0</span> 
+                    %
+                </p>
             </div>
         </div>
 
@@ -30,7 +33,7 @@
             <button type="submit">Calcular</button>
         </div>
 
-        <div class="resultado">
+        <div class="resultado" id="resultado">
             
         </div>
     </form>

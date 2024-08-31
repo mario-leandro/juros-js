@@ -1,20 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
-body {
-  width: 100dvw;
-  height: 100dvh;
-  background: #06141b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .container {
   width: 375px;
   height: 300px;
@@ -43,11 +26,14 @@ body {
   margin-top: 0.6em;
 }
 .container .inputs .dados-produto {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
-.container .inputs .dados-produto input {
+.container .inputs .dados-produto #valor_produto {
+  width: 200px;
   padding: 0.2em 0.5em;
   font-size: 16px;
   background: #11212d;
@@ -55,10 +41,7 @@ body {
   border: 1px solid #ccd0cf;
   border-radius: 0 12px 12px 0;
 }
-.container .inputs .dados-produto ::-moz-placeholder {
-  color: #ccd0cf;
-}
-.container .inputs .dados-produto ::placeholder {
+.container .inputs .dados-produto #valor_produto::placeholder {
   color: #ccd0cf;
 }
 .container .inputs .dados-produto span {
@@ -71,29 +54,21 @@ body {
 .container .inputs .taxa-produto {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
+  border: 1px solid #ccd0cf;
+  border-radius: 12px;
 }
-.container .inputs .taxa-produto input {
+.container .inputs .taxa-produto .taxa {
   padding: 0.2em 0.5em;
   font-size: 16px;
-  text-align: end;
+  text-align: center;
   background: #11212d;
   color: #ccd0cf;
-  border: 1px solid #ccd0cf;
-  border-radius: 12px 0 0 12px;
+  border-radius: 12px;
 }
-.container .inputs .taxa-produto ::-moz-placeholder {
+.container .inputs .taxa-produto .taxa::placeholder {
   color: #ccd0cf;
-}
-.container .inputs .taxa-produto ::placeholder {
-  color: #ccd0cf;
-}
-.container .inputs .taxa-produto span {
-  color: #ccd0cf;
-  padding: 0.2em 0.75em;
-  background: #11212d;
-  border: 1px solid #ccd0cf;
-  border-radius: 0 12px 12px 0;
 }
 .container .botao {
   width: 100%;
@@ -109,7 +84,7 @@ body {
   border: 1px solid #ccd0cf;
   border-radius: 15px;
 }
-.container .botao :hover {
+.container .botao button:hover {
   background: #9ba8ab;
   color: #06141b;
 }
@@ -122,4 +97,6 @@ body {
 }
 .container .resultado p {
   color: #06141b;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

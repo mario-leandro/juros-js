@@ -1,28 +1,45 @@
-//========== Criar Script para calcular juros de impostos de importação ==========//
-const form = document.querySelector('form');
+const form = document.querySelector("form");
 
-form.addEventListener('submit', (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
-    
-    function calcularImposto() {
-        // Preço do produto
-        const preco_produto = parseFloat(document.getElementsByName('valor_produto')[0].value);
-    
-        // Valor do Imposto
-        const imposto = parseFloat(document.getElementsByName('taxa')[0].value);
 
-        // Calcular imposto
-        const calculo = (imposto / 100) * preco_produto + preco_produto;
+    function pegarValores() {
+        const valorProduto = parseFloat(document.getElementById("valor_produto").value);
+        const PorcenTaxa = parseFloat(document.getElementById("valor_taxa").innerText);
+        const valorLimite = 50;
 
-        // Retornar resultado para o html
-        const resultado = document.getElementsByClassName('resultado')[0];
+        const icms = 17 / 100;
+        const taxaAbaixoCinquenta = 20 / 100;
+        const taxaAcimaCinquenta = 60 / 100;
+        const valorFrete = 15;
 
-        const span = document.createElement('span');
-
-        span.innerHTML = `Resultado: ${calculo}`;
-
-        resultado.appendChild(span);
+        return { valorProduto, valorLimite, PorcenTaxa, icms, taxaAbaixoCinquenta, taxaAcimaCinquenta, valorFrete };
     }
 
-    calcularImposto();
+    function calcularImposto() {
+        const { valorProduto, valorLimite, icms, taxaAbaixoCinquenta, taxaAcimaCinquenta, valorFrete } = pegarValores();
+
+        if (valorProduto < valorLimite) {
+            const valorAbaixoCinquentaDoll = valorProduto + (valorProduto * icms) + valorFrete + (valorProduto * taxaAbaixoCinquenta);
+            return valorAbaixoCinquentaDoll;
+        } else if (valorProduto >= valorLimite) {
+            const valorAcimaCinquentaDoll = valorProduto + (valorProduto * icms) + valorFrete + (valorProduto * taxaAcimaCinquenta);
+            return valorAcimaCinquentaDoll;
+        } else {
+            return "Valor inválido";
+        }
+    }
+
+    function mostrarResultado() {
+        const resultado = document.getElementById("resultado");
+        const valorFinal = calcularImposto();
+
+        if (isNaN(valorFinal)) {
+            resultado.innerHTML = "Valor inválido. Por favor, insira um número válido.";
+        } else {
+            resultado.innerHTML = `O valor do imposto de importação é de: R$${valorFinal.toFixed(2)}`;
+        }
+    }
+
+    mostrarResultado();
 });
